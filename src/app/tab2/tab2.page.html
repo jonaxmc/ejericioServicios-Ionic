@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar [color]="encabezado_base">
+    <ion-title>
+      CLIENTES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [color]="fondo_base">
+  <ion-list>
+    <ion-item *ngFor="let cliente of clientes | async" [color]="fondo_base">
+
+      <ion-avatar slot="start">
+        <img [src]='cliente.imagen'>
+      </ion-avatar>
+
+      <ion-label (click)="presentAlert(cliente.nombres,cliente.correo,cliente.direccion,cliente.telefono,cliente.imagen)">{{cliente.nombres}}</ion-label>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

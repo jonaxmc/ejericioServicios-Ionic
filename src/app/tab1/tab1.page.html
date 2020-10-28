@@ -1,0 +1,40 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar [color]="encabezado_base">
+    <ion-title>
+      REGISTRO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [color]="fondo_base">
+ 
+<form (ngSubmit)='registroDatos()' >
+  <ion-list >
+    <ion-item [color]="fondo_base">
+      <ion-label position='floating'>Ingrese su nombre</ion-label>
+      <ion-input type='text' [(ngModel)]="informacion.nombres" name="nombres"></ion-input>
+    </ion-item>
+    <ion-item [color]="fondo_base">
+      <ion-label position='floating'>Ingrese su cedula</ion-label>
+      <ion-input type='text' [(ngModel)]="informacion.cedula" name="cedula"></ion-input>
+    </ion-item>
+    <ion-item [color]="fondo_base"> 
+      <ion-label position='floating'>Ingrese su email</ion-label>
+      <ion-input type='emial' [(ngModel)]="informacion.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item [color]="fondo_base">
+      <ion-label position='floating'>Ingrese su direccion</ion-label>
+      <ion-input type='text' [(ngModel)]="informacion.direccion" name="direccion"></ion-input>
+    </ion-item>
+    <ion-item [color]="fondo_base">
+      <ion-label position='floating'>Ingrese su telefono</ion-label>
+      <ion-input type='text' [(ngModel)]="informacion.telefono" name="telefono"></ion-input>
+    </ion-item>
+    <ion-item [color]="fondo_base">
+      <ion-button expand="full" type="submit">
+        ENVIAR
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</form>
+</ion-content>
